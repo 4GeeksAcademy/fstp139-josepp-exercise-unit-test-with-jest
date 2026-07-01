@@ -33,7 +33,6 @@ test("3.5 dollars should be correctly converted to yens", function() {
 });
 
 /////////////////////////
-
 /////////////////////////
 
 /////////////////////////
@@ -41,7 +40,7 @@ test("3.5 dollars should be correctly converted to yens", function() {
 /////////////////////////
 
 // COMPARACION ESTRICTA /////////
-test("1 yen should be close to converted to pounds", function() {    
+test("1 yen should be close to 0.0055 pounds", function() {    
     const pounds = fromYenToPound(1);    
     const expected = 0.0055;
     expect(pounds).toBeCloseTo(0.0055);

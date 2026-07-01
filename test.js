@@ -21,7 +21,6 @@ test("One euro should be " + oneEuroIs.USD + " dollars", function() {
 // COMPARACION ESTRICTA /////////
 test("1 dollar should be close to 146.26 yens", function() {
     const yens = fromDollarToYen(1);
-    //const expected = (1 / oneEuroIs.USD) * oneEuroIs.JPY; 
     console.log(yens)
     const expected = 146.26
     expect(yens).toBeCloseTo(expected);
@@ -44,13 +43,13 @@ test("3.5 dollars should be correctly converted to yens", function() {
 // COMPARACION ESTRICTA /////////
 test("1 yen should be close to converted to pounds", function() {    
     const pounds = fromYenToPound(1);    
-    const expected = (1000 / oneEuroIs.JPY) * oneEuroIs.GBP;     
+    const expected = 0.0055;
     expect(pounds).toBeCloseTo(0.0055);
 });
 // COMPARACION CON CAMBIO ACTUAL /////////
 test("3.5 yens should be correctly converted to pounds", function() {    
-    const pounds = fromYenToPound(1000);    
-    const expected = (1000 / oneEuroIs.JPY) * oneEuroIs.GBP;     
+    const pounds = fromYenToPound(3.5);    
+    const expected = (3.5 / oneEuroIs.JPY) * oneEuroIs.GBP;     
     expect(pounds).toBe(expected);
 });
 
